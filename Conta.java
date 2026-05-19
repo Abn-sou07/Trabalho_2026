@@ -1,14 +1,14 @@
 public class Conta {
 
-    int numero;
-    String titular;
-    double saldo;
+    private int numero;
+    private Pessoa titular;
+    private double saldo;
 
     public int getNumero() {
         return this.numero;
     }
 
-    public String getTitular() {
+    public Pessoa getTitular() {
         return this.titular;
     }
 
@@ -20,10 +20,13 @@ public class Conta {
         this.numero = numero;
     }
 
-    public void setTitular(String titular) {
+    public void setTitular(Pessoa titular) {
         this.titular = titular;
     }
 
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
+    }
     
 
     boolean sacar(double valor) {

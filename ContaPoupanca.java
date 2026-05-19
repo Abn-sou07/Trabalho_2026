@@ -11,7 +11,7 @@ public class ContaPoupanca extends Conta {
     }
 
     public ContaPoupanca() {
-        this.saldo = 100.0;
+        setSaldo(100.0);
     }
 
 }

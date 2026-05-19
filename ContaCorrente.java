@@ -12,10 +12,10 @@ public void setLimite(double limite){
 
 @Override
     boolean sacar(double valor) {
-        if (valor > this.saldo + this.limite) {
+        if (valor > getSaldo() + this.limite) {
             return false;
         } else {
-            this.saldo -= valor;
+            setSaldo(getSaldo() - valor);
             return true;
         }
     }

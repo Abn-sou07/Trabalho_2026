@@ -1,32 +1,25 @@
 public class Pessoa {
 
     private String nome;
-    private int idade;
-    private String cpf;
+    private String dataNasc;
+    
 
     //metodos getters
     public String getNome(){
         return this.nome;
     }
 
-    public int getIdade(){
-        return this.idade;
+    public String getDataNasc(){
+        return this.dataNasc;
     }
 
-    public String getCpf(){
-        return this.cpf;
-    }
+    
     //metodos setters
     public void setNome(String nome){
         this.nome = nome;
     }
 
-    public void setIdade(int idade){
-        this.idade = idade;
+   public void setDataNasc(String dataNasc){
+        this.dataNasc = dataNasc;
     }
-
-    public void setCpf(String cpf){
-        this.cpf = cpf;
-    }
-
 }
