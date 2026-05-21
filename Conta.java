@@ -1,4 +1,4 @@
-public class Conta {
+public abstract class Conta {
 
     private int numero;
     private Pessoa titular;
@@ -29,7 +29,7 @@ public class Conta {
     }
     
 
-    boolean sacar(double valor) {
+    public boolean sacar(double valor) {
         if (valor > this.saldo) {
             return false;
         } else {
@@ -37,7 +37,5 @@ public class Conta {
             return true;
         }
     }
-    void depositar(double valor) {
-        this.saldo += valor;
-    }
+    public abstract void depositar(double valor);
 }
