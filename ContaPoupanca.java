@@ -14,8 +14,14 @@ public class ContaPoupanca extends Conta {
         setSaldo(100.0);
     }
 
-    @Override
-    public void depositar(double valor) {
+    public boolean sacar(double valor) {
+        if (valor > getSaldo()) {
+            return false;
+        } else {
+            setSaldo(getSaldo() - valor);
+            return true;
+        }
+    }
 
-}
+ 
 }

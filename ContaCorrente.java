@@ -10,7 +10,7 @@ public void setLimite(double limite){
     this.limite = limite;
 }
 
-@Override
+
     public boolean sacar(double valor) {
         if (valor > getSaldo() + this.limite) {
             return false;
@@ -20,9 +20,6 @@ public void setLimite(double limite){
         }
     }
 
-    @Override
-    public void depositar(double valor) {
-        setSaldo(getSaldo() + valor);
-    }
+   
 
 }

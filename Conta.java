@@ -29,13 +29,9 @@ public abstract class Conta {
     }
     
 
-    public boolean sacar(double valor) {
-        if (valor > this.saldo) {
-            return false;
-        } else {
-            this.saldo -= valor;
-            return true;
-        }
+    public abstract boolean sacar(double valor); 
+
+    public void depositar(double valor){
+        this.saldo += valor;
     }
-    public abstract void depositar(double valor);
 }
