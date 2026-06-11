@@ -14,7 +14,7 @@ public class ListContaMain {
 
     ContaCorrente cc2 = new ContaCorrente();
     PessoaFisica pf2 = new PessoaFisica();
-    pf2.setNome(null);
+    pf2.setNome("José");
     cc2.setNumero(456);
     cc2.setTitular(pf2);
     cc2.setSaldo(2000.0);   
@@ -30,6 +30,7 @@ public class ListContaMain {
     contas.add(cc1);
     contas.add(cc2);
     contas.add(cc3);
+   
    
 
     for (ContaCorrente conta : contas) {
