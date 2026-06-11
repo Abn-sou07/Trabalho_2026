@@ -4,8 +4,8 @@ public class ImprimiIdades {
         for (int i = 0; i < idades.length; i++) {
                 idades[i] = i * 10;         
         }
-        for (int i : idades) {
-            System.out.println("Idade " + i);
+        for (int i=idades.length-1; i >= 0; i--) {
+            System.out.println("Idade " + idades[i]);
         }
     }
     
