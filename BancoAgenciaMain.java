@@ -1,39 +1,51 @@
-
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class BancoAgenciaMain {
-    public static void main(String[] args) {
-        Banco banco = new Banco();
-        banco.setNumero(1);
-        banco.setNome("Banco do Brasil");
-        
-        Agencia agencia1 = new Agencia();
-        agencia1.setNumero(123);
-        agencia1.setNome("Agência Central");
-        
-        Agencia agencia2 = new Agencia();
-        agencia2.setNumero(456);
-        agencia2.setNome("Agência Norte");
-        
-        Agencia agencia3 = new Agencia();
-        agencia3.setNumero(789);
-        agencia3.setNome("Agência Sul");
-        
-        List<Agencia> agencias = new ArrayList<>();
-        agencias.add(agencia1);
-        agencias.add(agencia2);
-        agencias.add(agencia3);
-        
-        banco.setAgencias(agencias);
-        
-        System.out.println("Número do Banco: " + banco.getNumero());
-        System.out.println("Nome do Banco: " + banco.getNome());
-        System.out.println("Agências:");
-        for (Agencia agencia : banco.getAgencias()) {
-            System.out.println("- Número: " + agencia.getNumero() 
-            + ", Nome: " + agencia.getNome());
-        }
-    }
 
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        Banco banco = new Banco();
+
+        System.out.print("Digite o número do banco: ");
+        banco.setNumero(scanner.nextInt());
+        scanner.nextLine(); 
+
+        System.out.print("Digite o nome do banco: ");
+        banco.setNome(scanner.nextLine());
+
+        List<Agencia> listaAgencias = new ArrayList<>();
+
+        for (int i = 1; i <= 3; i++) {
+            Agencia agencia = new Agencia();
+
+            System.out.println("\nAgência " + i);
+
+            System.out.print("Número da agência: ");
+            agencia.setNumero(scanner.nextInt());
+            scanner.nextLine();
+
+            System.out.print("Nome da agência: ");
+            agencia.setNome(scanner.nextLine());
+
+            listaAgencias.add(agencia);
+        }
+
+        banco.setAgencias(listaAgencias);
+
+        System.out.println("\n===== DADOS DO BANCO =====");
+        System.out.println("Número: " + banco.getNumero());
+        System.out.println("Nome: " + banco.getNome());
+
+        System.out.println("\nAgências cadastradas:");
+        for (Agencia ag : banco.getAgencias()) {
+            System.out.println("Número: " + ag.getNumero()
+                    + " | Nome: " + ag.getNome());
+        }
+
+        scanner.close();
+    }
 }
